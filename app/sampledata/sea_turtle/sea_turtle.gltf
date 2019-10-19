@@ -1,0 +1,332 @@
+{
+    "asset": {
+        "generator": "Microsoft GLTF Exporter 2.5.1.1",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5123,
+            "count": 130704,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 22523,
+            "type": "VEC3",
+            "max": [
+                5.8476715087890629,
+                4.992389678955078,
+                5.46795654296875
+            ],
+            "min": [
+                -5.8476715087890629,
+                -1.8775460830511293e-7,
+                -5.4625244140625
+            ]
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 22523,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5126,
+            "count": 22523,
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5126,
+            "count": 22523,
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 261408,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 261408,
+            "byteLength": 270276,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 531684,
+            "byteLength": 270276,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 801960,
+            "byteLength": 360368,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1162328,
+            "byteLength": 180184,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 1342512,
+            "uri": "8d7a6c2f7c8c4cb8a277024583dd8e7d.fbx_0.bin"
+        }
+    ],
+    "images": [
+        {
+            "uri": "2928335200_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2145448328_4x4.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "368525360_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "368525738_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2928335200_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2145448328_2x2.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "368525360_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "368525738_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2928335200_512x512.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2145448328_1x1.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "368525360_512x512.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "368525738_512x512.png",
+            "mimeType": "image/png"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 6
+                },
+                "metallicRoughnessTexture": {
+                    "index": 7
+                }
+            },
+            "name": "mtl_sea_turtle41",
+            "doubleSided": true,
+            "extensions": {
+                "KHR_materials_pbrSpecularGlossiness": {
+                    "diffuseTexture": {
+                        "index": 4
+                    },
+                    "specularGlossinessTexture": {
+                        "index": 5
+                    }
+                }
+            },
+            "extras": {
+                "MSFT_sRGBFactors": false
+            }
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 10
+                },
+                "metallicRoughnessTexture": {
+                    "index": 11
+                }
+            },
+            "name": "mtl_sea_turtle41",
+            "doubleSided": true,
+            "extensions": {
+                "KHR_materials_pbrSpecularGlossiness": {
+                    "diffuseTexture": {
+                        "index": 8
+                    },
+                    "specularGlossinessTexture": {
+                        "index": 9
+                    }
+                }
+            },
+            "extras": {
+                "MSFT_sRGBFactors": false
+            }
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 2
+                },
+                "metallicRoughnessTexture": {
+                    "index": 3
+                }
+            },
+            "name": "mtl_sea_turtle41",
+            "doubleSided": true,
+            "extensions": {
+                "KHR_materials_pbrSpecularGlossiness": {
+                    "diffuseTexture": {
+                        "index": 0
+                    },
+                    "specularGlossinessTexture": {
+                        "index": 1
+                    }
+                },
+                "MSFT_lod": {
+                    "ids": [
+                        0,
+                        1
+                    ]
+                }
+            },
+            "extras": {
+                "MSFT_sRGBFactors": false
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "sea_turtle.1.mesh",
+            "primitives": [
+                {
+                    "attributes": {
+                        "TANGENT": 3,
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "material": 2
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "children": [
+                1
+            ],
+            "scale": [
+                0.009999999776482582,
+                0.009999999776482582,
+                0.009999999776482582
+            ],
+            "name": "RootNode.0"
+        },
+        {
+            "mesh": 0,
+            "name": "sea_turtle.1"
+        }
+    ],
+    "samplers": [
+        {
+            "minFilter": 9985
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "name": "texture2928335200",
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "name": "texture2145448328",
+            "sampler": 0,
+            "source": 1
+        },
+        {
+            "name": "197848558_bc",
+            "sampler": 0,
+            "source": 2
+        },
+        {
+            "name": "197848558_mr",
+            "sampler": 0,
+            "source": 3
+        },
+        {
+            "name": "texture2928335200",
+            "sampler": 0,
+            "source": 4
+        },
+        {
+            "name": "texture2145448328",
+            "sampler": 0,
+            "source": 5
+        },
+        {
+            "name": "197848558_bc",
+            "sampler": 0,
+            "source": 6
+        },
+        {
+            "name": "197848558_mr",
+            "sampler": 0,
+            "source": 7
+        },
+        {
+            "name": "texture2928335200",
+            "sampler": 0,
+            "source": 8
+        },
+        {
+            "name": "texture2145448328",
+            "sampler": 0,
+            "source": 9
+        },
+        {
+            "name": "197848558_bc",
+            "sampler": 0,
+            "source": 10
+        },
+        {
+            "name": "197848558_mr",
+            "sampler": 0,
+            "source": 11
+        }
+    ],
+    "scene": 0,
+    "extensionsUsed": [
+        "KHR_materials_pbrSpecularGlossiness",
+        "MSFT_lod"
+    ]
+}

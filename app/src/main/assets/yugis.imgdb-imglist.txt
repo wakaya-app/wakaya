@@ -1,0 +1,4 @@
+croc.png|/home/luis/Documents/nasa-space-apps/as_ar_assets/croc.png
+elephants.png|/home/luis/Documents/nasa-space-apps/as_ar_assets/elephants.png
+penguin.png|/home/luis/Documents/nasa-space-apps/as_ar_assets/penguin.png
+schmetterling.png|/home/luis/Documents/nasa-space-apps/as_ar_assets/schmetterling.png

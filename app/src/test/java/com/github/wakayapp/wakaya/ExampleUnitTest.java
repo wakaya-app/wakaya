@@ -1,4 +1,4 @@
-package com.gihub.wakayapp.wakaya;
+package com.github.wakayapp.wakaya;
 
 import org.junit.Test;
 

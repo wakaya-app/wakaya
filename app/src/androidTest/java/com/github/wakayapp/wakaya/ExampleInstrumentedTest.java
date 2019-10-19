@@ -1,4 +1,4 @@
-package com.gihub.wakayapp.wakaya;
+package com.github.wakayapp.wakaya;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.gihub.wakayapp.wakaya", appContext.getPackageName());
+        assertEquals("com.github.wakayapp.wakaya", appContext.getPackageName());
     }
 }
