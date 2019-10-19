@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.ar.core.AugmentedImage;
 import com.google.ar.core.Frame;
-import com.google.ar.core.examples.java.common.helpers.CameraPermissionHelper;
 import com.google.ar.sceneform.FrameTime;
 import com.google.ar.sceneform.ux.ArFragment;
 
@@ -30,17 +29,16 @@ public class ARFindActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ar_find);
+
+        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
+        fitToScanView = findViewById(R.id.image_view_fit_to_scan);
+
+        arFragment.getArSceneView().getScene().addOnUpdateListener(this::onUpdateFrame);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        // ARCore requires camera permission to operate.
-        if (!CameraPermissionHelper.hasCameraPermission(this)) {
-            CameraPermissionHelper.requestCameraPermission(this);
-            return;
-        }
-
     }
 
     /**
@@ -64,7 +62,6 @@ public class ARFindActivity extends AppCompatActivity {
                     // When an image is in PAUSED state, but the camera is not PAUSED, it has been detected,
                     // but not yet tracked.
                     String text = "Detected Image '" + augmentedImage.getName() + "'";
-                    SnackbarHelper.getInstance().showMessage(this, text);
                     break;
 
                 case TRACKING:
