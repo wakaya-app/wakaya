@@ -3,8 +3,6 @@ package com.github.wakayapp.wakaya;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,11 +25,6 @@ import java.io.InputStream;
 public class AugmentedImageFragment extends ArFragment {
   private static final String TAG = "AugmentedImageFragment";
 
-  // This is the name of the image in the sample database.  A copy of the image is in the assets
-  // directory.  Opening this image on your computer is a good quick way to test the augmented image
-  // matching.
-  private static final String DEFAULT_IMAGE_NAME = "default.jpg";
-
   // This is a pre-created database containing the sample image.
   //private static final String SAMPLE_IMAGE_DATABASE = "sample_database.imgdb";
   private static final String SAMPLE_IMAGE_DATABASE = "yugis.imgdb";
@@ -52,8 +45,6 @@ public class AugmentedImageFragment extends ArFragment {
     // Sceneform eventually.
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
       Log.e(TAG, "Sceneform requires Android N or later");
-      SnackbarHelper.getInstance()
-          .showError(getActivity(), "Sceneform requires Android N or later");
     }
 
     String openGlVersionString =
@@ -62,8 +53,6 @@ public class AugmentedImageFragment extends ArFragment {
             .getGlEsVersion();
     if (Double.parseDouble(openGlVersionString) < MIN_OPENGL_VERSION) {
       Log.e(TAG, "Sceneform requires OpenGL ES 3.0 or later");
-      SnackbarHelper.getInstance()
-          .showError(getActivity(), "Sceneform requires OpenGL ES 3.0 or later");
     }
   }
 
@@ -87,8 +76,7 @@ public class AugmentedImageFragment extends ArFragment {
     config.setFocusMode(Config.FocusMode.AUTO);
 
     if (!setupAugmentedImageDatabase(config, session)) {
-      SnackbarHelper.getInstance()
-          .showError(getActivity(), "Could not setup augmented image database");
+      Log.e(TAG, "Could not setup augmented image database");
     }
     return config;
   }
@@ -102,45 +90,16 @@ public class AugmentedImageFragment extends ArFragment {
       return false;
     }
 
-    // There are two ways to configure an AugmentedImageDatabase:
-    // 1. Add Bitmap to DB directly
-    // 2. Load a pre-built AugmentedImageDatabase
-    // Option 2) has
-    // * shorter setup time
-    // * doesn't require images to be packaged in apk.
-    if (USE_SINGLE_IMAGE) {
-      Bitmap augmentedImageBitmap = loadAugmentedImageBitmap(assetManager);
-      if (augmentedImageBitmap == null) {
-        return false;
-      }
-
-      augmentedImageDatabase = new AugmentedImageDatabase(session);
-      augmentedImageDatabase.addImage(DEFAULT_IMAGE_NAME, augmentedImageBitmap);
-      // If the physical size of the image is known, you can instead use:
-      //     augmentedImageDatabase.addImage("image_name", augmentedImageBitmap, widthInMeters);
-      // This will improve the initial detection speed. ARCore will still actively estimate the
-      // physical size of the image as it is viewed from multiple viewpoints.
-    } else {
-      // This is an alternative way to initialize an AugmentedImageDatabase instance,
-      // load a pre-existing augmented image database.
-      try (InputStream is = getContext().getAssets().open(SAMPLE_IMAGE_DATABASE)) {
-        augmentedImageDatabase = AugmentedImageDatabase.deserialize(session, is);
-      } catch (IOException e) {
-        Log.e(TAG, "IO exception loading augmented image database.", e);
-        return false;
-      }
+    // Load a pre-existing augmented image database.
+    try (InputStream is = getContext().getAssets().open(SAMPLE_IMAGE_DATABASE)) {
+      augmentedImageDatabase = AugmentedImageDatabase.deserialize(session, is);
+    } catch (IOException e) {
+      Log.e(TAG, "IO exception loading augmented image database.", e);
+      return false;
     }
+
 
     config.setAugmentedImageDatabase(augmentedImageDatabase);
     return true;
-  }
-
-  private Bitmap loadAugmentedImageBitmap(AssetManager assetManager) {
-    try (InputStream is = assetManager.open(DEFAULT_IMAGE_NAME)) {
-      return BitmapFactory.decodeStream(is);
-    } catch (IOException e) {
-      Log.e(TAG, "IO exception loading augmented image bitmap.", e);
-    }
-    return null;
   }
 }
