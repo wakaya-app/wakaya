@@ -6,28 +6,28 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/activity_turtle_info"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/activity_turtle_map" />
+        app:srcCompat="@drawable/example_activity_data_presentation" />
 
-    <Button
-        android:id="@+id/button2"
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="574dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="104dp"
-        android:background="#00FFFFFF"
-        android:onClick="changeToDataPresentation"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="637dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="43dp"
+        android:backgroundTint="@color/colorAccentDark"
+        android:onClick="changeToQuestion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
 </androidx.constraintlayout.widget.ConstraintLayout>

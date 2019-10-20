@@ -15,21 +15,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/activity_turtle_info" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+    <Button
+        android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="179dp"
-        android:layout_marginTop="596dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="83dp"
-        android:clickable="true"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="595dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="82dp"
+        android:background="#00FFFFFF"
         android:onClick="changeToMigrationMap"
-        app:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/transparent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
