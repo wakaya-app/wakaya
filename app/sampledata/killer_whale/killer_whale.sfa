@@ -1,0 +1,112 @@
+{
+  materials: [
+    {
+      name: 'mtl_killer_whale41',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '1554605177_2048x2048',
+        },
+        {
+          normal: '2797580162_2048x2048',
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '771718305_2048x2048',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: '1030926677_2048x2048',
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/killer_whale/killer_whale.gltf',
+    name: 'killer_whale',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      file: 'sampledata/killer_whale/1554605177_2048x2048.png',
+      name: '1554605177_2048x2048',
+      pipeline_name: '1554605177_2048x2048.png',
+    },
+    {
+      file: 'sampledata/killer_whale/771718305_2048x2048.png',
+      name: '771718305_2048x2048',
+      pipeline_name: '771718305_2048x2048.png',
+    },
+    {
+      file: 'sampledata/killer_whale/1030926677_2048x2048.png',
+      name: '1030926677_2048x2048',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: '1030926677_2048x2048.png',
+    },
+    {
+      file: 'sampledata/killer_whale/2797580162_2048x2048.png',
+      name: '2797580162_2048x2048',
+      params: {
+        usage_type: 'Normal',
+      },
+      pipeline_name: '2797580162_2048x2048.png',
+    },
+  ],
+  version: '0.54:2',
+}
