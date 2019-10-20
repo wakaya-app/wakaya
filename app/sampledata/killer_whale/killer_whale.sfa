@@ -79,6 +79,7 @@
     file: 'sampledata/killer_whale/killer_whale.gltf',
     name: 'killer_whale',
     recenter: 'root',
+    scale: 4.0
   },
   samplers: [
     {
