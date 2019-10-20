@@ -3,8 +3,11 @@ package com.github.wakayapp.wakaya;
 import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
+import android.view.MotionEvent;
+
 import com.google.ar.core.AugmentedImage;
 import com.google.ar.sceneform.AnchorNode;
+import com.google.ar.sceneform.HitTestResult;
 import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import java.util.concurrent.CompletableFuture;
@@ -63,6 +66,11 @@ public class AugmentedImageNodeSingle extends AnchorNode {
         singleNode = new Node();
         singleNode.setParent(this);
         singleNode.setRenderable(singleRenderable.getNow(null));
+
+        singleNode.setOnTapListener(
+                (HitTestResult hitTestResult, MotionEvent motionEvent) -> {
+                    Log.i(TAG,  ">>>>>>>>>>>>>>>>>>>>> Hit the node!");
+                });
     }
 
     public AugmentedImage getImage() {
