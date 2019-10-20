@@ -1,8 +1,12 @@
 package com.github.wakayapp.wakaya;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.github.wakayapp.wakaya.quiz.DataPresentationActivity;
 
 public class MigrationMapActivity  extends AppCompatActivity {
 
@@ -20,4 +24,8 @@ public class MigrationMapActivity  extends AppCompatActivity {
         setContentView(activityId);
     }
 
+    public void changeToDataPresentation(final View view) {
+        final Intent intent = new Intent(this, DataPresentationActivity.class);
+        startActivity(intent);
+    }
 }

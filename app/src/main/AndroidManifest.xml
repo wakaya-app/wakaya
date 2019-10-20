@@ -34,6 +34,12 @@
         <activity android:name=".MigrationMapActivity"
             android:theme="@style/MainActivityTheme">
         </activity>
+        <activity android:name=".quiz.DataPresentationActivity"
+            android:theme="@style/MainActivityTheme">
+        </activity>
+        <activity android:name=".quiz.QuestionActivity"
+            android:theme="@style/MainActivityTheme">
+        </activity>
         <!-- Indicates that the app requires ARCore ("AR Required"). Causes the Google
          Play Store to download and install Google Play Services for AR when the
          app is installed.
