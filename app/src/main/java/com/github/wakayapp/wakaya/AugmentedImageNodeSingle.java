@@ -24,6 +24,7 @@ public class AugmentedImageNodeSingle extends AnchorNode {
     private static final int TURTLE_ID = R.layout.activity_turtle_info;
 
     private final Context context;
+    private String model_asset;
 
     // The augmented image represented by this node.
     private AugmentedImage image;
@@ -37,11 +38,12 @@ public class AugmentedImageNodeSingle extends AnchorNode {
 
     // Replace the definition of the AugmentedImageNode function with the
     // following code, which loads SeaTurtle.sfb into singleRenderable.
-    public AugmentedImageNodeSingle(Context context) {
+    public AugmentedImageNodeSingle(Context context, String model_asset) {
         this.context = context;
+        this.model_asset = model_asset;
         singleRenderable =
                 ModelRenderable.builder()
-                        .setSource(context, Uri.parse("sea_turtle.sfb"))
+                        .setSource(context, Uri.parse(model_asset))
                         .build();
     }
 
@@ -83,6 +85,9 @@ public class AugmentedImageNodeSingle extends AnchorNode {
     }
 
     public void onTap() {
+        if (!this.model_asset.equals("sea_turtle.sfb"))
+            return;
+
         final Intent intent = new Intent(context, AnimalInfoActivity.class);
         intent.putExtra(AnimalInfoActivity.ANIMAL_ACTIVITY_ID, TURTLE_ID);
         context.startActivity(intent);

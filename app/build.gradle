@@ -43,3 +43,9 @@ sceneform.asset('sampledata/sea_turtle/sea_turtle.gltf',
         'default',
         'sampledata/sea_turtle/sea_turtle.sfa',
         'src/main/assets/sea_turtle')
+
+
+sceneform.asset('sampledata/killer_whale/killer_whale.gltf',
+        'default',
+        'sampledata/killer_whale/killer_whale.sfa',
+        'src/main/assets/killer_whale')

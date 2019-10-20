@@ -1,0 +1,377 @@
+{
+    "asset": {
+        "generator": "Microsoft GLTF Exporter 2.5.1.1",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5123,
+            "count": 56886,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 9934,
+            "type": "VEC3",
+            "max": [
+                1.567585825920105,
+                3.845041275024414,
+                3.0537357330322267
+            ],
+            "min": [
+                -1.5675857067108155,
+                -0.001011386513710022,
+                -3.0559492111206056
+            ]
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 9934,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5126,
+            "count": 9934,
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5126,
+            "count": 9934,
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 113772,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 113772,
+            "byteLength": 119208,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 232980,
+            "byteLength": 119208,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 352188,
+            "byteLength": 158944,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 511132,
+            "byteLength": 79472,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 590604,
+            "uri": "61ebc9e53f194084a08de3e5cd2d24e5.fbx_0.bin"
+        }
+    ],
+    "images": [
+        {
+            "uri": "1554605177_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "771718305_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1030926299_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1030926677_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2797580162_2048x2048.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1554605177_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "771718305_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1030926299_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1030926677_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2797580162_1024x1024.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1554605177_512x512.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "771718305_512x512.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1030926299_512x512.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "1030926677_512x512.png",
+            "mimeType": "image/png"
+        },
+        {
+            "uri": "2797580162_512x512.png",
+            "mimeType": "image/png"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 7
+                },
+                "metallicRoughnessTexture": {
+                    "index": 8
+                }
+            },
+            "normalTexture": {
+                "index": 9
+            },
+            "occlusionTexture": {
+                "index": 8
+            },
+            "name": "mtl_killer_whale41",
+            "doubleSided": true,
+            "extensions": {
+                "KHR_materials_pbrSpecularGlossiness": {
+                    "diffuseTexture": {
+                        "index": 5
+                    },
+                    "specularGlossinessTexture": {
+                        "index": 6
+                    }
+                }
+            },
+            "extras": {
+                "MSFT_sRGBFactors": false
+            }
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 12
+                },
+                "metallicRoughnessTexture": {
+                    "index": 13
+                }
+            },
+            "normalTexture": {
+                "index": 14
+            },
+            "occlusionTexture": {
+                "index": 13
+            },
+            "name": "mtl_killer_whale41",
+            "doubleSided": true,
+            "extensions": {
+                "KHR_materials_pbrSpecularGlossiness": {
+                    "diffuseTexture": {
+                        "index": 10
+                    },
+                    "specularGlossinessTexture": {
+                        "index": 11
+                    }
+                }
+            },
+            "extras": {
+                "MSFT_sRGBFactors": false
+            }
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 2
+                },
+                "metallicRoughnessTexture": {
+                    "index": 3
+                }
+            },
+            "normalTexture": {
+                "index": 4
+            },
+            "occlusionTexture": {
+                "index": 3
+            },
+            "name": "mtl_killer_whale41",
+            "doubleSided": true,
+            "extensions": {
+                "KHR_materials_pbrSpecularGlossiness": {
+                    "diffuseTexture": {
+                        "index": 0
+                    },
+                    "specularGlossinessTexture": {
+                        "index": 1
+                    }
+                },
+                "MSFT_lod": {
+                    "ids": [
+                        0,
+                        1
+                    ]
+                }
+            },
+            "extras": {
+                "MSFT_sRGBFactors": false
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "killer_whale.1.mesh",
+            "primitives": [
+                {
+                    "attributes": {
+                        "TANGENT": 3,
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "material": 2
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "children": [
+                1
+            ],
+            "scale": [
+                0.009999999776482582,
+                0.009999999776482582,
+                0.009999999776482582
+            ],
+            "name": "RootNode.0"
+        },
+        {
+            "mesh": 0,
+            "name": "killer_whale.1"
+        }
+    ],
+    "samplers": [
+        {
+            "minFilter": 9985
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "name": "texture1554605177",
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "name": "texture771718305",
+            "sampler": 0,
+            "source": 1
+        },
+        {
+            "name": "677207113_bc",
+            "sampler": 0,
+            "source": 2
+        },
+        {
+            "name": "677207113_mr",
+            "sampler": 0,
+            "source": 3
+        },
+        {
+            "name": "texture2797580162",
+            "sampler": 0,
+            "source": 4
+        },
+        {
+            "name": "texture1554605177",
+            "sampler": 0,
+            "source": 5
+        },
+        {
+            "name": "texture771718305",
+            "sampler": 0,
+            "source": 6
+        },
+        {
+            "name": "677207113_bc",
+            "sampler": 0,
+            "source": 7
+        },
+        {
+            "name": "677207113_mr",
+            "sampler": 0,
+            "source": 8
+        },
+        {
+            "name": "texture2797580162",
+            "sampler": 0,
+            "source": 9
+        },
+        {
+            "name": "texture1554605177",
+            "sampler": 0,
+            "source": 10
+        },
+        {
+            "name": "texture771718305",
+            "sampler": 0,
+            "source": 11
+        },
+        {
+            "name": "677207113_bc",
+            "sampler": 0,
+            "source": 12
+        },
+        {
+            "name": "677207113_mr",
+            "sampler": 0,
+            "source": 13
+        },
+        {
+            "name": "texture2797580162",
+            "sampler": 0,
+            "source": 14
+        }
+    ],
+    "scene": 0,
+    "extensionsUsed": [
+        "KHR_materials_pbrSpecularGlossiness",
+        "MSFT_lod"
+    ]
+}

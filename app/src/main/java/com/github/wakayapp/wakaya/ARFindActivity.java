@@ -20,12 +20,21 @@ import java.util.Map;
 
 public class ARFindActivity extends AppCompatActivity {
 
+    public static final String TAG = ARFindActivity.class.getName();
+
     private ArFragment arFragment;
     private ImageView fitToScanView;
 
     // Augmented image and its associated center pose anchor, keyed by the augmented image in
     // the database.
     private final Map<AugmentedImage, AugmentedImageNodeSingle> augmentedImageMap = new HashMap<>();
+
+    private static Map<String, String> cardToModelMap;
+    static {
+        cardToModelMap = new HashMap<>();
+        cardToModelMap.put("schmeterling.png", "sea_turtle.sfb");
+        cardToModelMap.put("penguin.png", "killer_whale.sfb");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +74,7 @@ public class ARFindActivity extends AppCompatActivity {
                     // When an image is in PAUSED state, but the camera is not PAUSED, it has been detected,
                     // but not yet tracked.
                     String text = "Detected Image '" + augmentedImage.getName() + "'";
+                    Log.i(TAG, text);
                     break;
 
                 case TRACKING:
@@ -73,7 +83,9 @@ public class ARFindActivity extends AppCompatActivity {
 
                     // Create a new anchor for newly found images.
                     if (!augmentedImageMap.containsKey(augmentedImage)) {
-                        AugmentedImageNodeSingle node = new AugmentedImageNodeSingle(this);
+                        AugmentedImageNodeSingle node =
+                            new AugmentedImageNodeSingle(this,
+                                                         cardToModelMap.getOrDefault(augmentedImage.getName(), "sea_turtle.sfb"));
                         node.setImage(augmentedImage);
                         augmentedImageMap.put(augmentedImage, node);
                         arFragment.getArSceneView().getScene().addChild(node);
