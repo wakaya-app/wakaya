@@ -1,6 +1,8 @@
 package com.github.wakayapp.wakaya;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -16,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeToArFindActivity(final View view) {
-        setTheme(R.style.AppTheme);
-        setContentView(R.layout.activity_ar_find);
+        final Intent intent = new Intent(this, ARFindActivity.class);
+        startActivity(intent);
     }
 
     @Override

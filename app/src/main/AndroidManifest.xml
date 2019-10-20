@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-      tools:ignore="GoogleAppIndexingWarning" >
+        tools:ignore="GoogleAppIndexingWarning" >
         <activity android:name=".MainActivity"
             android:theme="@style/MainActivityTheme">
             <intent-filter>
@@ -24,6 +24,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ARFindActivity"
+            android:theme="@style/AppTheme">
         </activity>
         <!-- Indicates that the app requires ARCore ("AR Required"). Causes the Google
          Play Store to download and install Google Play Services for AR when the
