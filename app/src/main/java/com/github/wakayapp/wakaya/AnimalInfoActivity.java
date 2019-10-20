@@ -10,7 +10,7 @@ public class AnimalInfoActivity extends AppCompatActivity {
 
     public static final String ANIMAL_ACTIVITY_ID = AnimalInfoActivity.class.getName();
 
-    private static final int TURTLE_ID = R.layout.activity_turtle_info; // TODO - change
+    private static final int TURTLE_ID = R.layout.activity_turtle_map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class AnimalInfoActivity extends AppCompatActivity {
     }
 
     public void changeToMigrationMap(final View view) {
-        final Intent intent = new Intent(this, AnimalInfoActivity.class);
+        final Intent intent = new Intent(this, MigrationMapActivity.class);
         intent.putExtra(MigrationMapActivity.MIGRATION_MAP_ACTIVITY_ID, TURTLE_ID);
         startActivity(intent);
     }
