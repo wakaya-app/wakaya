@@ -1,6 +1,7 @@
 package com.github.wakayapp.wakaya;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -20,6 +21,9 @@ import java.util.concurrent.CompletableFuture;
 public class AugmentedImageNodeSingle extends AnchorNode {
 
     private static final String TAG = "AugmentedImageNodeSingle";
+    private static final int TURTLE_ID = R.layout.activity_turtle_info;
+
+    private final Context context;
 
     // The augmented image represented by this node.
     private AugmentedImage image;
@@ -34,6 +38,7 @@ public class AugmentedImageNodeSingle extends AnchorNode {
     // Replace the definition of the AugmentedImageNode function with the
     // following code, which loads SeaTurtle.sfb into singleRenderable.
     public AugmentedImageNodeSingle(Context context) {
+        this.context = context;
         singleRenderable =
                 ModelRenderable.builder()
                         .setSource(context, Uri.parse("sea_turtle.sfb"))
@@ -69,11 +74,18 @@ public class AugmentedImageNodeSingle extends AnchorNode {
 
         singleNode.setOnTapListener(
                 (HitTestResult hitTestResult, MotionEvent motionEvent) -> {
-                    Log.i(TAG,  ">>>>>>>>>>>>>>>>>>>>> Hit the node!");
+                    onTap();
                 });
     }
 
     public AugmentedImage getImage() {
         return image;
     }
+
+    public void onTap() {
+        final Intent intent = new Intent(context, AnimalInfoActivity.class);
+        intent.putExtra(AnimalInfoActivity.ANIMAL_ACTIVITY_ID, TURTLE_ID);
+        context.startActivity(intent);
+    }
+
 }
